@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import Body from './Components/Body/Body';
 import Donut from './Components/Donut/Donut';
 import LineCt from './Components/LineCt/LineCt';
 
@@ -13,7 +14,7 @@ function App() {
       <div className="container">
       <LineCt></LineCt>
       <br/>
-      <Donut></Donut>
+      <Body></Body>
 
     </div></div>
   );

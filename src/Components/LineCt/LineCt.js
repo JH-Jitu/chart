@@ -43,10 +43,11 @@ useEffect(() =>{
   fetch("https://5fc952922af77700165ae75d.mockapi.io/api/task/line-chart")
   .then(res => res.json())
   .then(data => {
+    // data.map(d=>console.log(d))
       setIndex(data);
-      console.log(data)
+      // console.log(data)
   })
-}, [index]);
+}, []);
 
 
 const DateFormatter = date => {
@@ -60,32 +61,49 @@ const DateFormatter2 = date => {
 index.forEach(d => {
   d.createdAt = moment(d.createdAt).valueOf(); // date -> epoch
 });
-const valueCreator = value => {
-  // return moment(date).unix();
-  return value;
+
+
+// Tool
+
+const CustomTooltip = ({ active, payload, label}) => {  
+  
+  if (active) {console.log(label);
+    
+    return (
+      
+      <div className="custom-tooltip p-2">
+        <b className="label">{`${DateFormatter2(label)}`}</b> <br/>
+        <b style={{color:"rgb(57, 113, 216)"}} className="label">{`${payload[0].value}`}</b> <br/>
+        <small className="desc">Incoming Data</small> <br/>
+        <b style={{color:"rgb(101, 166, 240)"}} className="label">{`${payload[1].value}`}</b> <br/>
+        <small className="desc">Error Data</small>
+      </div>
+    );
+  }
+
+  return null;
 };
 
     return (
-        <div className="line">
-            <ResponsiveContainer margin={{ top: 20, right: 30, left: 0, bottom: 0 }}>
-        <LineChart
+        <div className="line d-flex align-items-center justify-content-center">
+            <ResponsiveContainer >
+        <LineChart  
         data={index}
         
       >
         <CartesianGrid stroke="#f5f5f5" />
         <XAxis dataKey="createdAt" tickFormatter={DateFormatter} activeDot={{ r: 8 }} />
         <YAxis dataKey="incoming_data" stroke="#8884d8" activeDot={{ r: 8 }} />
-        <Tooltip
-            wrapperStyle={{ backgroundColor: "red" }}
-            labelStyle={{ color: "green", fontSize: "15px" }}
-            itemStyle={{ color: "cyan", fontSize: "16px" }}
-            formatter={valueCreator}
-            labelFormatter={DateFormatter2}
+        <Tooltip 
+        content={<CustomTooltip labelFormatter={DateFormatter2}/>}
+        labelFormatter={DateFormatter2}
           />
         
         
+        
+        <Line type="" dataKey="incoming_data" stroke="rgb(57, 113, 216)" activeDot={{ r: 8 }} />
         <Line type="" dataKey="data_error" stroke="rgb(101, 166, 240)" activeDot={{ r: 8 }} />
-        <Line type="" dataKey="incoming_data" stroke="rgb(101, 166, 240)" activeDot={{ r: 8 }} />
+        <Line dataKey="createdAt" tickFormatter={DateFormatter} />
         
         
       </LineChart></ResponsiveContainer>

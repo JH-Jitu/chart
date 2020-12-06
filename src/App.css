@@ -1,5 +1,6 @@
 .App{
   font-family: 'Roboto', sans-serif;
+  border: 1px solid rgb(248, 251, 255);
 }
 
 .line{
@@ -13,4 +14,11 @@
 .donut{
   border: 1px solid rgb(230, 228, 228);
   border-radius: 5px;
+}
+
+.custom-tooltip{
+  box-shadow: 1px 1px 10px lightgrey;
+  background-color: white;
+}.custom-tooltip small{
+  color: gray;
 }

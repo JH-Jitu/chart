@@ -1,6 +1,6 @@
 import React, { PureComponent, useState } from 'react';
 import {
-  PieChart, Pie, Sector, Cell, Tooltip,
+  PieChart, Pie, Sector, Cell, Tooltip, ResponsiveContainer,
 } from 'recharts';
 
 const Donut = () => {
@@ -66,7 +66,9 @@ const Donut = () => {
       
 
     return (
-        <div className="donut"> <PieChart width={200} height={200}>
+        <div className="donut d-flex justify-content-center">
+          <ResponsiveContainer  width={200} height={200}>
+           <PieChart>
         <Pie
           activeIndex={index}
           activeShape={renderActiveShape}
@@ -75,13 +77,13 @@ const Donut = () => {
           // cy={200}
           innerRadius={70}
           outerRadius={80}
-          fill="#8884d8"
+          // fill="#8884d8"
           dataKey="value"
           onMouseEnter={onPieEnter}
         >{
           data.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
         }</Pie>
-      </PieChart>
+      </PieChart></ResponsiveContainer>
         </div>
     );
 };
