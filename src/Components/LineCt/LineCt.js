@@ -103,7 +103,6 @@ const CustomTooltip = ({ active, payload, label}) => {
         
         <Line type="" dataKey="incoming_data" stroke="rgb(57, 113, 216)" activeDot={{ r: 8 }} />
         <Line type="" dataKey="data_error" stroke="rgb(101, 166, 240)" activeDot={{ r: 8 }} />
-        <Line dataKey="createdAt" tickFormatter={DateFormatter} />
         
         
       </LineChart></ResponsiveContainer>

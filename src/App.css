@@ -1,6 +1,6 @@
 .App{
   font-family: 'Roboto', sans-serif;
-  border: 1px solid rgb(248, 251, 255);
+  border: 1px solid rgb(124, 168, 3);
 }
 
 .line{
@@ -14,6 +14,8 @@
 .donut{
   border: 1px solid rgb(230, 228, 228);
   border-radius: 5px;
+  height: 240px;
+  margin-bottom: 30px;
 }
 
 .custom-tooltip{
@@ -21,4 +23,52 @@
   background-color: white;
 }.custom-tooltip small{
   color: gray;
+}
+
+/* #pattern-stripe{
+  border-radius: 5px;
+} */
+
+.visual{
+  border: 1px solid rgb(230, 228, 228);
+  height: 240px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+.dataHead{
+  font-size: 12px;
+}
+
+.data{
+  font-size: 16px;
+  font-weight: 600;
+}
+.dataHead .status{
+  border: none;
+  background-color: red;
+  padding: 1px 4px;
+  font-size: 9px;
+  color: white;
+  border-radius: 50px;
+}
+.dataHead small{
+  color: gray;
+  white-space: pre-line;
+  margin-top: 10px;
+}
+.dataHead{
+  margin-bottom: 7px;
+}
+.dataHead-heading{
+  margin-bottom: 10px;}
+.dataHead-heading b{
+  font-size: 16px;
+}.dataHead-heading small{
+  font-size: 11px;
+}
+.dataHead .icon{
+  width: 15px;
+  height: 15px;
+  color: blue;
+  margin-right: 5px;
 }

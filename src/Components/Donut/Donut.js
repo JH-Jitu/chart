@@ -2,6 +2,8 @@ import React, { PureComponent, useState } from 'react';
 import {
   PieChart, Pie, Sector, Cell, Tooltip, ResponsiveContainer,
 } from 'recharts';
+import { faCoffee, faArrowUp, faDotCircle } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Donut = () => {
   const data = [
@@ -33,9 +35,24 @@ const Donut = () => {
           <g>
             <text style={{fontSize: "18px"}} fill="gray" x={cx} y={cy} dy={-35} textAnchor="middle">Currently</text>
             <text style={{fontSize: "40px", fontWeight: "600"}} x={cx} y={cy} dy={1} textAnchor="middle" >$16m</text>
-            <text style={{fontSize: "20px", fontWeight: "bold"}} x={cx} y={cy} dy={25} textAnchor="middle" fill={fill}>{`↑ ${(percent * 100).toFixed(2)}%`}</text>
+
+            <FontAwesomeIcon width={20} x={95} y={16} dy={25}  imageAnchor="middle" color={fill} icon={faArrowUp} />
+            <text style={{fontSize: "20px", fontWeight: "bold"}} x={cx} y={cy} dy={25} textAnchor="right" fill={fill}>{`${(percent * 100).toFixed(0)}%`}</text>
+
             <text style={{fontSize: "12px"}} fill="gray" x={cx} y={cy} dy={40} textAnchor="middle">from last month</text>
-            <Sector
+
+{/* High-Low-Medium */}
+            <FontAwesomeIcon width={10} x={25} y={95} dy={100}  imageAnchor="middle" color="red" icon={faDotCircle} />
+            <text style={{fontSize: "12px"}} fill="red" x={50} y={cy} dy={100} textAnchor="middle">High</text>
+
+            <FontAwesomeIcon width={10} x={85} y={95} dy={100}  imageAnchor="middle" color="orange" icon={faDotCircle} />
+            <text style={{fontSize: "12px"}} fill="orange" x={cx} y={cy} dy={100} textAnchor="middle">Medium</text>
+
+            <FontAwesomeIcon width={10} x={170} y={95} dy={100}  imageAnchor="middle" color="rgb(230, 210, 30)" icon={faDotCircle} />
+            <text style={{fontSize: "12px"}} fill="rgb(230, 210, 30)" x={195} y={cy} dy={100} textAnchor="middle">Low</text>
+
+            
+            <Sector cornerRadius={20} paddingAngle={-5}
               cx={cx}
               cy={cy}
               innerRadius={innerRadius}
@@ -44,6 +61,7 @@ const Donut = () => {
               endAngle={endAngle}
               fill={fill}
             />
+            
           
             {/* <path d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`} stroke={fill} fill="none" />
             <circle cx={ex} cy={ey} r={2} fill={fill} stroke="none" />
@@ -66,24 +84,34 @@ const Donut = () => {
       
 
     return (
-        <div className="donut d-flex justify-content-center">
-          <ResponsiveContainer  width={200} height={200}>
+        <div>{/* Heading */} <div className="d-flex align-items-center justify-content-between dataHead-heading">
+        <div className="">
+            <b>Business Impact</b>
+        </div>
+        <div className="data d-flex align-items-center">
+            <small style={{color: "rgb(102, 184, 223)"}}>MORE ></small>
+        </div>
+    </div>
+          <div className="donut d-flex justify-content-center">
+          <ResponsiveContainer  width={240} height={240}>
            <PieChart>
-        <Pie
+        <Pie  cornerRadius={20} paddingAngle={-5} stroke="none"
           activeIndex={index}
           activeShape={renderActiveShape}
           data={data}
           // cx={200}
           // cy={200}
-          innerRadius={70}
+          innerRadius={72}
           outerRadius={80}
           // fill="#8884d8"
           dataKey="value"
           onMouseEnter={onPieEnter}
         >{
-          data.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
+          data.map((entry, index) => <Cell  key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
         }</Pie>
       </PieChart></ResponsiveContainer>
+      
+        </div>
         </div>
     );
 };
