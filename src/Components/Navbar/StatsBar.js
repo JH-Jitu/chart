@@ -20,16 +20,16 @@ const StatsBar = () => {
           <a style={{color: 'rgb(101, 166, 240)'}} className="nav-link" href="#c"><FontAwesomeIcon className="icon" icon={faDotCircle} />No of Error detected</a>
         </li>
         <li className="nav-item">
-          <a style={{color: 'grey'}} className="nav-item" className="nav-link" href="#b"><FontAwesomeIcon className="icon" icon={faDotCircle} />No of error fixed number</a>
+          <a style={{color: 'grey'}} className="nav-link" href="#b"><FontAwesomeIcon className="icon" icon={faDotCircle} />No of error fixed number</a>
         </li>
-        <li>
-          <a style={{color: 'grey'}} className="nav-item" className="nav-link" href="#c"><FontAwesomeIcon className="icon" icon={faDotCircle} />Number of error unassigned</a>
+        <li className="nav-item" >
+          <a style={{color: 'grey'}} className="nav-link" href="#c"><FontAwesomeIcon className="icon" icon={faDotCircle} />Number of error unassigned</a>
         </li>
-        <li>
-          <a style={{color: 'grey'}} className="nav-item" className="nav-link" href="#c"><FontAwesomeIcon className="icon" icon={faDotCircle} />Number of error unassigned</a>
+        <li className="nav-link">
+          <a style={{color: 'grey'}} className="nav-item" href="#c"><FontAwesomeIcon className="icon" icon={faDotCircle} />Number of error unassigned</a>
         </li>
-        <li>
-          <a style={{color: 'grey'}} className="nav-item" className="nav-link" href="#c"><FontAwesomeIcon className="icon" icon={faDotCircle} />Menu▽</a>
+        <li className="nav-link">
+          <a style={{color: 'grey'}} className="nav-item" href="#c"><FontAwesomeIcon className="icon" icon={faDotCircle} />Menu▽</a>
         </li>
       </ul>
     </div>
