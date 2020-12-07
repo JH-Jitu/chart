@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCodeBranch, faServer, faCommentDots, faBug, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+import { faCodeBranch, faServer, faCommentDots, faBug, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 
 const VisualData = () => {

@@ -2,6 +2,57 @@
   font-family: 'Roboto', sans-serif;
   border: 1px solid rgb(124, 168, 3);
 }
+.mainNav a{
+  font-size: 16px;
+  color: black;
+  font-weight: 600;
+  margin-right: 20px;
+}
+.mainNav a .icon{
+  color: white;
+  margin-right: 5px;
+  stroke: blue;
+  stroke-width: 40px;
+}
+.logo{
+  margin-left: -50px;
+}
+@media screen and (max-width: 992px) {
+  .logo{
+    margin-left: 0px;
+  }
+  .navbar-toggler{
+    background-color: blue;
+    width: 75%;
+  }
+  
+.statsBar{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+}
+.navbar-brand img{
+  width: 40px;
+  border-radius: 50%;
+}
+.statsBar a{
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.statsBar li a{
+  font-size: 11px;
+  margin-right: 0px;
+}
+.statsBar a .icon{
+  margin-right: 2px;
+}
+.statsBar{
+  margin-left: -30px;
+  margin-right: -30px;
+}
+
 
 .line{
   width: 100%;
@@ -9,6 +60,8 @@
   padding: 10px;
   border: 1px solid rgb(230, 228, 228);
   border-radius: 5px;
+  position: relative;
+
 }
 
 .donut{

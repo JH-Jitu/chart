@@ -2,7 +2,7 @@ import React, { PureComponent, useState } from 'react';
 import {
   PieChart, Pie, Sector, Cell, Tooltip, ResponsiveContainer,
 } from 'recharts';
-import { faCoffee, faArrowUp, faDotCircle } from '@fortawesome/free-solid-svg-icons'
+import { faCoffee, faArrowUp, faDotCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Donut = () => {

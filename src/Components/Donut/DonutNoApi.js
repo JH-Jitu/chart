@@ -1,5 +1,5 @@
 import React, { PureComponent, useState } from 'react';
-import { faCoffee, faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { faCoffee, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import {
   PieChart, Pie, Sector, Cell, Tooltip, ResponsiveContainer,
 } from 'recharts';
