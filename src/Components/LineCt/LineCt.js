@@ -6,6 +6,7 @@ moment().format();
 
 
 const LineCt = () => {
+  
 
   // const data = [
   //   {
@@ -87,13 +88,13 @@ const CustomTooltip = ({ active, payload, label}) => {
     return (
         <div className="line d-flex align-items-center justify-content-center">
             <ResponsiveContainer >
-        <LineChart  
+        <LineChart
         data={index}
         
       >
         <CartesianGrid stroke="#f5f5f5" />
-        <XAxis dataKey="createdAt" tickFormatter={DateFormatter} activeDot={{ r: 8 }} />
-        <YAxis dataKey="incoming_data" stroke="#8884d8" activeDot={{ r: 8 }} />
+        <XAxis stroke="gray" style={{fontSize: "11px", marginRight: "10px"}}  dy={10} dataKey="createdAt" tickFormatter={DateFormatter} activeDot={{ r: 8 }} />
+        <YAxis style={{fontSize: "11px", marginRight: "10px"}} dataKey="incoming_data" stroke="gray" activeDot={{ r: 8 }} />
         <Tooltip 
         content={<CustomTooltip labelFormatter={DateFormatter2}/>}
         labelFormatter={DateFormatter2}
@@ -101,8 +102,8 @@ const CustomTooltip = ({ active, payload, label}) => {
         
         
         
-        <Line type="" dataKey="incoming_data" stroke="rgb(57, 113, 216)" activeDot={{ r: 8 }} />
-        <Line type="" dataKey="data_error" stroke="rgb(101, 166, 240)" activeDot={{ r: 8 }} />
+        <Line  dataKey="incoming_data" stroke="rgb(57, 113, 216)" activeDot={{ r: 8 }} />
+        <Line  dataKey="data_error" stroke="rgb(101, 166, 240)" activeDot={{ r: 8 }} />
         
         
       </LineChart></ResponsiveContainer>

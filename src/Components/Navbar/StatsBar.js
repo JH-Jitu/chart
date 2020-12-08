@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDotCircle } from '@fortawesome/free-solid-svg-icons';
+import { faCircle } from '@fortawesome/free-regular-svg-icons';
 
 const StatsBar = () => {
     return (
@@ -14,22 +14,22 @@ const StatsBar = () => {
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav ml-auto">
       <li className="nav-item">
-          <a style={{color: 'rgb(57, 113, 216)'}} className="nav-link" href="#c"><FontAwesomeIcon className="icon" icon={faDotCircle} />Incoming Data</a>
+          <a style={{color: 'rgb(57, 113, 216)'}} className="nav-link" href="#c"><FontAwesomeIcon className="icon" icon={faCircle} />Incoming Data</a>
         </li>
         <li className="nav-item">
-          <a style={{color: 'rgb(101, 166, 240)'}} className="nav-link" href="#c"><FontAwesomeIcon className="icon" icon={faDotCircle} />No of Error detected</a>
+          <a style={{color: 'rgb(101, 166, 240)'}} className="nav-link" href="#c"><FontAwesomeIcon className="icon" icon={faCircle} />No of Error detected</a>
         </li>
         <li className="nav-item">
-          <a style={{color: 'grey'}} className="nav-link" href="#b"><FontAwesomeIcon className="icon" icon={faDotCircle} />No of error fixed number</a>
+          <a style={{color: 'grey'}} className="nav-link" href="#b"><FontAwesomeIcon className="icon" icon={faCircle} />No of error fixed number</a>
         </li>
         <li className="nav-item" >
-          <a style={{color: 'grey'}} className="nav-link" href="#c"><FontAwesomeIcon className="icon" icon={faDotCircle} />Number of error unassigned</a>
+          <a style={{color: 'grey'}} className="nav-link" href="#c"><FontAwesomeIcon className="icon" icon={faCircle} />Number of error unassigned</a>
         </li>
-        <li className="nav-link">
-          <a style={{color: 'grey'}} className="nav-item" href="#c"><FontAwesomeIcon className="icon" icon={faDotCircle} />Number of error unassigned</a>
+        <li className="nav-item">
+          <a style={{color: 'grey'}} className="nav-link" href="#c"><FontAwesomeIcon className="icon" icon={faCircle} />Number of error unassigned</a>
         </li>
-        <li className="nav-link">
-          <a style={{color: 'grey'}} className="nav-item" href="#c"><FontAwesomeIcon className="icon" icon={faDotCircle} />Menu▽</a>
+        <li className="nav-item">
+          <a style={{color: 'grey'}} className="nav-link" href="#c"><FontAwesomeIcon className="icon" icon={faCircle} />Menu▽</a>
         </li>
       </ul>
     </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCodeBranch, faServer, faCommentDots, faBug, faPlayCircle, faChartLine } from '@fortawesome/free-solid-svg-icons';
+import { faCommentDots, faPlayCircle} from '@fortawesome/free-regular-svg-icons';
+import { faBug, faChartLine, faCodeBranch, faServer} from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     return (

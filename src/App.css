@@ -9,10 +9,8 @@
   margin-right: 20px;
 }
 .mainNav a .icon{
-  color: white;
+  color: rgb(57, 113, 216);
   margin-right: 5px;
-  stroke: blue;
-  stroke-width: 40px;
 }
 .logo{
   margin-left: -50px;
@@ -98,7 +96,6 @@
 }
 .dataHead .status{
   border: none;
-  background-color: red;
   padding: 1px 4px;
   font-size: 9px;
   color: white;
@@ -122,6 +119,6 @@
 .dataHead .icon{
   width: 15px;
   height: 15px;
-  color: blue;
+  color: rgb(40, 92, 189);
   margin-right: 5px;
 }
