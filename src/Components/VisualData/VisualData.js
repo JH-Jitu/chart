@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCodeBranch, faServer, faCommentDots, faBug, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import { useState } from 'react';
 
 const VisualData = () => {
 
@@ -23,12 +22,6 @@ const VisualData = () => {
         name: 'Wrong telephone numbers', flow: 'MARKETING WORK FLOW 1', status: 'LOW', value: 1500, price: 1500, color: "orange"
     },
   ];
-
- const [fake, setFake] = useState([]);
-// fakeData.map(d=>setFake(d));
-console.log(fakeData);
-
-
 
     return (
         <div>
