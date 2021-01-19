@@ -7,8 +7,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <br/>
 [Resume of Jitu](https://drive.google.com/file/d/1-3B8qqI42hpwolqwCOCxAf764-b2IsVe/view?fbclid=IwAR2A-A-keUlaVDokPxX-PP0kRbVbxrVnoAe43bqkaLdYfJfti1e6-sIlnYY)
 
-### D3 Chart (Rechart)
-This is an online course/service purchase type website. It’s developed by React, MongoDB, Firebase, JS, ES6, React-Router, React-Hooks, React-custom-hook, Html, CSS and Material UI.
+### D3 JS Chart Practice (Rechart)
+This is an data visualization type website. It's made for business analysis. It's developed with React, Rechart (D3 JS), Bootstrap, React Hooks, Netlify. 
+
 ### Link: https://react-business-chart-demo.netlify.app/
 ### Features
 -	Show dynamic data with the chart visualization.
